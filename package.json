@@ -1,0 +1,27 @@
+{
+    "name": "qb-export-node",
+    "version": "0.1.0",
+    "description": "QuickBooks Online venders and accounts lists export tool",
+    "private": true,
+    "main": "export.js",
+    "scripts": {
+        "start": "node export",
+        "test": "jasmine-node tests/*.spec.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/waltzofpearls/qb-export-node.git"
+    },
+    "keywords": [
+        "quickbooks",
+        "export"
+    ],
+    "author": "Waltz.of.Pearls <rollie@topbasslabs.com, rollie.ma@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/waltzofpearls/qb-export-node/issues"
+    },
+    "homepage": "https://github.com/waltzofpearls/qb-export-node",
+    "dependencies": {
+    }
+}
