@@ -6,7 +6,7 @@
     "main": "export.js",
     "scripts": {
         "start": "node export",
-        "test": "jasmine-node tests/*.spec.js"
+        "test": "jasmine-node --verbose tests"
     },
     "repository": {
         "type": "git",
