@@ -17,6 +17,13 @@ By default, the lists will be saved to [./exports] folder. Settings can be chang
 ~ npm install
 ```
 
+You may need to run installation script as root if some of the dependencies are required
+to be installed globally, then just simple run
+
+```shell
+~ sudo npm install
+```
+
 ## Running the CLI Script
 
 ```shell
@@ -24,6 +31,14 @@ By default, the lists will be saved to [./exports] folder. Settings can be chang
 ```
 
 ## Testing
+
+This tool uses jasmine-node as testing framework. If you don't have it installed, then run
+
+```shell
+~ sudo npm install -g jasmine-node
+```
+
+And then run the following command to test
 
 ```shell
 ~ npm test
