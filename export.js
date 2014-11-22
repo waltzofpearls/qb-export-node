@@ -1,5 +1,15 @@
 #!/usr/bin/env node
 
+/*
+ * qb-export-node
+ *
+ * QuickBooks Online lists export tool powered by node.js
+ * https://github.com/waltzofpearls/qb-export-node
+ *
+ * Copyright (c) 2014 Topbass Labs (topbasslabs.com)
+ * Author Waltz.of.Pearls <rollie@topbasslabs.com, rollie.ma@gmail.com>
+ */
+
 var qbexport = require("./libs/qbexport");
 var settings = require("./settings");
 
