@@ -27,5 +27,8 @@
         "colors": "*",
         "node-quickbooks": "*",
         "js2xmlparser": "*"
+    },
+    "engines": {
+        "node": ">=0.10.0"
     }
 }
