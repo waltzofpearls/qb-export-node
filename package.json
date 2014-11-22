@@ -23,6 +23,7 @@
     },
     "homepage": "https://github.com/waltzofpearls/qb-export-node",
     "dependencies": {
+        "q": "1.*",
         "colors": "*",
         "node-quickbooks": "*",
         "js2xmlparser": "*"

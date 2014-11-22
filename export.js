@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-var file = require("fs");
+var q = require("q");
+var fs = require("fs");
 var colors = require("colors");
 var quickbooks = require("node-quickbooks");
-var js2xml = require("js2xmlparser");
+var js2xmlparser = require("js2xmlparser");
 
 var consumerKey = "qyprdrXuXEN8yeabLlxlNqaXTdTSjC";
 var consumerSecret = "jv0OHMHtLjYF0c9Sr8tqUyzynBfEO8XWTAgPQUCH";
@@ -25,9 +26,9 @@ qbo.findAccounts({}, function(_, accounts) {
     delete accounts.QueryResponse.startPosition;
     delete accounts.QueryResponse.maxResults;
 
-    xml = js2xml("Accounts", accounts.QueryResponse);
+    xml = js2xmlparser("Accounts", accounts.QueryResponse);
 
-    file.writeFile(accountsFile, xml, function(error) {
+    fs.writeFile(accountsFile, xml, function(error) {
         console.log("- " + accountsFile + " " + "[DONE]".green);
         xml = null;
     });
@@ -38,9 +39,9 @@ qbo.findVendors({}, function(_, vendors) {
     delete vendors.QueryResponse.startPosition;
     delete vendors.QueryResponse.maxResults;
 
-    xml = js2xml("Vendors", vendors.QueryResponse);
+    xml = js2xmlparser("Vendors", vendors.QueryResponse);
 
-    file.writeFile(vendorsFile, xml, function(error) {
+    fs.writeFile(vendorsFile, xml, function(error) {
         console.log("- " + vendorsFile + " " + "[DONE]".green);
         xml = null;
     });
